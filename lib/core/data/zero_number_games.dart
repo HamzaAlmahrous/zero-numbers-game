@@ -1,0 +1,253 @@
+import 'zero_number_class.dart';
+
+List<ZeroNumberGame> levels = [
+  ZeroNumberGame(
+    cost: 0,
+    parent: null,
+    n: 1,
+    m: 3,
+    board: [
+      [1, 2, 3],
+    ],
+  ),
+  ZeroNumberGame(
+    cost: 0,
+    n: 2,
+    parent: null,
+    m: 3,
+    board: [
+      [1, 1, 4],
+      [-1, 2, -1]
+    ],
+  ),
+  ZeroNumberGame(
+    parent: null,
+    cost: 0,
+    n: 3,
+    m: 3,
+    board: [
+      [-1, 1, -1],
+      [1, 2, 1],
+      [-1, 5, -1],
+    ],
+  ),
+  ZeroNumberGame(
+    cost: 0,
+    n: 6,
+    m: 2,
+    parent: null,
+    board: [
+      [2, 1],
+      [3, -1],
+      [5, 4],
+      [9, -1],
+      [1, 7],
+      [8, -1],
+    ],
+  ),
+  ZeroNumberGame(
+    cost: 0,
+    parent: null,
+    n: 3,
+    m: 5,
+    board: [
+      [-1, -1, 1, -1, -1],
+      [-1, 1, 1, 9, -1],
+      [1, 5, 6, 1, 1],
+    ],
+  ),
+  //level 6
+  ZeroNumberGame(
+    cost: 0,
+    parent: null,
+    n: 3,
+    m: 4,
+    board: [
+      [4, 6, 7, 1],
+      [-1, 6, 6, -1],
+      [-1, 6, 4, 4],
+    ],
+  ),
+  ZeroNumberGame(
+    cost: 0,
+    parent: null,
+    n: 4,
+    m: 4,
+    board: [
+      [1, -1, -1, -1],
+      [1, 1, -1, -1],
+      [3, 1, 5, -1],
+      [3, 1, 1, 1],
+    ],
+  ),
+  ZeroNumberGame(
+    cost: 0,
+    parent: null,
+    n: 3,
+    m: 3,
+    board: [
+      [5, 5, 3],
+      [4, -1, 2],
+      [9, 2, 2],
+    ],
+  ),
+  ZeroNumberGame(
+    cost: 0,
+    parent: null,
+    n: 5,
+    m: 5,
+    board: [
+      [-1, -1, 1, -1, -1],
+      [-1, 2, 1, 6, -1],
+      [2, 2, -1, 4, 1],
+      [-1, 2, 1, 1, -1],
+      [-1, -1, 5, -1, -1],
+    ],
+  ),
+  ZeroNumberGame(
+    cost: 0,
+    parent: null,
+    n: 4,
+    m: 4,
+    board: [
+      [8, 1, 3, 8],
+      [4, 3, -1, 5],
+      [4, -1, -1, 3],
+      [3, 2, 2, 2],
+    ],
+  ),
+  //level 11
+  ZeroNumberGame(
+    cost: 0,
+    parent: null,
+    n: 4,
+    m: 5,
+    board: [
+      [-1, 1, -1, 2, -1],
+      [9, 9, -1, 2, 1],
+      [3, 8, -1, 1, 3],
+      [-1, 3, 5, 7, -1],
+    ],
+  ),
+  ZeroNumberGame(
+    cost: 0,
+    parent: null,
+    n: 4,
+    m: 4,
+    board: [
+      [2, 1, 2, -1],
+      [2, -1, 5, 8],
+      [5, 1, -1, 1],
+      [-1, 2, 1, 4],
+    ],
+  ),
+  ZeroNumberGame(
+    cost: 0,
+    parent: null,
+    n: 4,
+    m: 6,
+    board: [
+      [9, 1, -1, -1 ,-1, -1],
+      [7, 1, 3, 7, -1, -1],
+      [-1, -1, 4, 9, 1, 4],
+      [-1, -1, -1, -1, 2, 4],
+    ],
+  ),
+  ZeroNumberGame(
+    cost: 0,
+    parent: null,
+    n: 7,
+    m: 4,
+    board: [
+      [-1, -1, 1, -1],
+      [-1, -1, 2, -1],
+      [7, -1, 1, -1],
+      [6, 8, 9, 9],
+      [1, -1, 4, -1],
+      [-1, -1, 1, -1],
+      [-1, -1, 5, -1],
+    ],
+  ),
+  ZeroNumberGame(
+    cost: 0,
+    parent: null,
+    n: 5,
+    m: 6,
+    board: [
+      [-1, -1, -1, 5, -1, 4],
+      [9, 8, 9, 5, 2, 3],
+      [-1, -1 ,-1 ,3 , 1, -1],
+      [-1, -1 ,-1 ,2 , -1, -1],
+      [-1, -1 ,-1 ,1 , -1, -1],
+    ],
+  ),
+  //level 16
+  ZeroNumberGame(
+    cost: 0,
+    parent: null,
+    n: 5,
+    m: 5,
+    board: [
+      [4,5,5,4,1],
+      [1,-1,1,-1,-1],
+      [1,-1,9,1,6],
+      [1,-1,-1,-1,5],
+      [1,1,1,5,4],
+    ],
+  ),
+  ZeroNumberGame(
+    cost: 0,
+    parent: null,
+    n: 3,
+    m: 5,
+    board: [
+      [-1,-1,4,4,-1],
+      [4,4,4,3,3],
+      [-1,6,4,-1,-1],
+    ],
+  ),
+  ZeroNumberGame(
+    cost: 0,
+    parent: null,
+    n: 5,
+    m: 5,
+    board: [
+      [2,5,1,2,3],
+      [-1,5,1,1,-1],
+      [-1,-1,5,-1,-1],
+      [-1,1,1,1,-1],
+      [1,1,2,1,1],
+    ],
+  ),
+  ZeroNumberGame(
+    cost: 0,
+    parent: null,
+    n: 6,
+    m: 6,
+    board: [
+      [-1,-1,-1,4,-1,-1],
+      [-1,4,-1,1,-1,-1],
+      [1,3,3,1,1,1],
+      [1,-1,-1,1,-1,4],
+      [9,-1,-1,5,-1,6],
+      [1,-1,-1,-1,-1,-1],
+    ],
+  ),
+  ZeroNumberGame(
+    cost: 0,
+    parent: null,
+    n: 8,
+    m: 6,
+    board: [
+      [-1,-1,1,2,-1,-1],
+      [1,1,8,3,1,1],
+      [1,-1,1,2,-1,1],
+      [1,-1,-1,-1,-1,1],
+      [1,-1,-1,-1,-1,1],
+      [1,-1,-1,-1,-1,1],
+      [2,1,-1,-1,4,5],
+      [1,-1,-1,-1,-1,4],
+    ],
+  ),
+];
+ 
