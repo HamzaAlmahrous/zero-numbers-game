@@ -185,47 +185,4 @@ class SearchAlgo {
       }
     }
   }
-
-  // // A*
-
-  // static ZeroNumberGame aStarSearch(ZeroNumberGame game, HashSet visited) {
-  //   HeapPriorityQueue<ZeroNumberGame> queue = HeapPriorityQueue((a, b) {
-  //     if (a.cost > b.cost) {
-  //       return 1;
-  //     }
-  //     return -1;
-  //   });
-
-  //   int numberOfStates = 0;
-
-  //   queue.add(game);
-
-  //   while (queue.isNotEmpty) {
-  //     var parent = queue.removeFirst();
-  //     if (!visited.contains(parent.getHashCode())) {
-  //       visited.add(parent.getHashCode());
-  //     }
-  //     numberOfStates++;
-  //     if (parent.checkWin()) {
-        // print("win");
-  //       parent.showZeroNumberGame();
-        // print('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
-        // print('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
-        // print("number of state: $numberOfStates");
-        // print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>');
-        // print("path:");
-        // printPath(parent, 0);
-  //       return parent;
-  //     }
-  //     for (var x in parent.getStates()) {
-  //       if (x.checkLose()) {
-  //         continue;
-  //       }
-  //       if (!visited.contains(x.getHashCode())) {
-  //         queue.add(x);
-  //       }
-  //     }
-  //   }
-  //   return game;
-  // }
 }
