@@ -4,14 +4,14 @@
 
 ## Search Algorithms in AI
 
-this game done with flutter and the main purpose of its to understand and use algorithms like:
+this game done with flutter and the main purpose of it to understand and use algorithms like:
 
 - DFS (Depth First Search),
 - BFS (Breadth First Search),
 - UCS (Uniform Cost Search (Dijkstra for large graphs),
 - A* Search Algorithm.
   
-I used this algorithms to get to the solution to every level of the game and gave the player a hint when he stuck somewhere.
+I used these algorithms to get to the solution to every level of the game and gave the player a hint when he stuck somewhere.
 
 This project is a starting point for a Flutter application.
 
