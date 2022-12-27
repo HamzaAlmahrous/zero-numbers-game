@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:zero_numbers_game/core/entities/home_item_model.dart';
 import 'package:zero_numbers_game/features/OnBoarding/presentation/widgets/clip_path.dart';
@@ -43,22 +44,41 @@ class ZeroNumbersWidget extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  homeItemModel.title,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontFamily: 'iron-man',
-                      color: homeItemModel.titleColor,
-                      fontSize: 50,
-                      fontWeight: FontWeight.w500),
+                Row(
+                  children: <Widget>[
+                    Expanded( // Constrains AutoSizeText to the width of the Row
+                      child: AutoSizeText(
+                        homeItemModel.title,
+                        textAlign: TextAlign.center,
+                        maxLines: 2,
+                        minFontSize: 14,
+                        presetFontSizes: const [50, 30, 14],
+                        stepGranularity: 0.1,
+                        style: TextStyle(
+                            fontFamily: 'iron-man',
+                            color: homeItemModel.titleColor,
+                            fontWeight: FontWeight.w500),
+                      )
+                    ),
+                  ],
                 ),
-                Text(
-                  homeItemModel.body,
-                  style: TextStyle(
-                      fontFamily: 'iron-man',
-                      color: homeItemModel.bodyColor,
-                      fontSize: 44,
-                      fontWeight: FontWeight.w500),
+                Row(
+                  children: <Widget>[
+                    Expanded( // Constrains AutoSizeText to the width of the Row
+                      child: AutoSizeText(
+                        homeItemModel.body,
+                        textAlign: TextAlign.center,
+                        maxLines: 2,
+                        minFontSize: 50,
+                        presetFontSizes: const [50, 28, 14],
+                        stepGranularity: 0.1,
+                        style: TextStyle(
+                            fontFamily: 'iron-man',
+                            color: homeItemModel.bodyColor,
+                            fontWeight: FontWeight.w500),
+                      )
+                    ),
+                  ],
                 ),
               ],
             ),

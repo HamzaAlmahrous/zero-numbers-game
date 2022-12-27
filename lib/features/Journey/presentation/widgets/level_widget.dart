@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/const/styles.dart';
@@ -36,14 +37,20 @@ class LevelWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text(
-                'Level ${index + 1}',
-                style: TextStyle(
-                  fontSize: 32,
-                  color: zeroWhite,
-                  fontFamily: 'quicksand',
-                  fontWeight: FontWeight.w700,
-                ),
+              Expanded( // Constrains AutoSizeText to the width of the Row
+                child: AutoSizeText(
+                  'Level ${index + 1}',
+                  textAlign: TextAlign.center,
+                  maxLines: 1,
+                  minFontSize: 32,
+                  presetFontSizes: const [32, 24, 14],
+                  stepGranularity: 0.1,
+                  style: TextStyle(
+                    color: zeroWhite,
+                    fontFamily: 'quicksand',
+                    fontWeight: FontWeight.w700,
+                  ),
+                )
               ),
               Icon(Icons.arrow_forward_ios_sharp, color: zeroWhite, size: 32),
             ],
